@@ -1,0 +1,7 @@
+Don't forget to turn on XAMPP (Apache & Mysql)
+
+cd C:\Users\USER\eclipse-workspace\FINAL PROJECT\EXPRESS-RESTAPI
+
+C:
+
+node index.js

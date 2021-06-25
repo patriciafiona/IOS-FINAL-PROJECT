@@ -1,0 +1,17 @@
+{
+  "name": "express-restapi",
+  "version": "1.0.0",
+  "description": "This is REST-API that will use in IOS Final Project. To Save the data I create backend app using J2EE. This API will use for get and modidy underarmour datas. IOS - FrontEnd and J2EE - FrontEnd & BackEnd.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Patricia Fiona",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.7"
+  }
+}
