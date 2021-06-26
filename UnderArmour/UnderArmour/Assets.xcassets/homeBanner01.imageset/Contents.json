@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "SS21_BBLL_Curry_Flow_8_005_Site_OS_PRM.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
