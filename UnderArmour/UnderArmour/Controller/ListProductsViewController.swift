@@ -61,7 +61,7 @@ class ListProductsViewController: UITableViewController{
         let cell = tableView.dequeueReusableCell(withIdentifier: PropertyKeys.productCell, for: indexPath) as! ProductTableViewCell
         
         let product = productsSpace[indexPath.row]
-        cell.productCellImage.image = UIImage(named: product.photo_01)
+        FetchImageURL().setImageToImageView(imageContainer: cell.productCellImage, imageUrl: "http://127.0.0.1:3000/images/\(product.photo_01)")
         cell.productCellName?.text = product.name
         cell.productCellPrice?.text = priceFormat(price: product.price)
         
@@ -83,7 +83,7 @@ class ListProductsViewController: UITableViewController{
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let indexPath = tableView.indexPathForSelectedRow,
             segue.identifier == PropertyKeys.showProductDetail {
-            let detailProductViewController = segue.destination as! DetailViewController
+            let detailProductViewController = segue.destination as! DetailProductViewController
             detailProductViewController.product = productsSpace[indexPath.row]
         }
     }

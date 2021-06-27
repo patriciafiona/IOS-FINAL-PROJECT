@@ -8,8 +8,9 @@ exports.index = function(req, res) {
 };
 
 exports.products = function(req, res) {
-  pool.query('Select products.*, categories.name AS category_name, '+
-                    'tags.name AS tag_name, photos.photo_01 from products '+
+   pool.query('Select products.*, categories.name AS category_name, '+
+                    'tags.name AS tag_name, photos.photo_01, photos.photo_02, '+
+                    'photos.photo_03, photos.photo_04, photos.photo_05 from products '+
                     'INNER JOIN categories ON products.category = categories.id '+
                     'INNER JOIN tags ON products.tag = tags.id '+
                     'INNER JOIN photos ON products.id = photos.product_id '+
@@ -24,8 +25,9 @@ exports.products = function(req, res) {
 }
 
 exports.productsByCategory = function(req, res) {
-    pool.query('Select products.*, categories.name AS category_name, '+
-                    'tags.name AS tag_name, photos.photo_01 from products '+
+     pool.query('Select products.*, categories.name AS category_name, '+
+                    'tags.name AS tag_name, photos.photo_01, photos.photo_02, '+
+                    'photos.photo_03, photos.photo_04, photos.photo_05 from products '+
                     'INNER JOIN categories ON products.category = categories.id '+
                     'INNER JOIN tags ON products.tag = tags.id '+
                     'INNER JOIN photos ON products.id = photos.product_id '+
@@ -40,8 +42,9 @@ exports.productsByCategory = function(req, res) {
 };
 
 exports.productsByCategoryAndTag = function(req, res) {
-    pool.query('Select products.*, categories.name AS category_name, '+
-                    'tags.name AS tag_name, photos.photo_01 from products '+
+     pool.query('Select products.*, categories.name AS category_name, '+
+                    'tags.name AS tag_name, photos.photo_01, photos.photo_02, '+
+                    'photos.photo_03, photos.photo_04, photos.photo_05 from products '+
                     'INNER JOIN categories ON products.category = categories.id '+
                     'INNER JOIN tags ON products.tag = tags.id '+
                     'INNER JOIN photos ON products.id = photos.product_id '+

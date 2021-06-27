@@ -627,7 +627,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="440"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="women_tops_prev" translatesAutoresizingMaskIntoConstraints="NO" id="V44-Wo-BsX">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="V44-Wo-BsX">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="333"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="333" id="dne-KP-t4o"/>
@@ -669,7 +669,7 @@
                                     <outlet property="productCellImage" destination="V44-Wo-BsX" id="m76-cb-04u"/>
                                     <outlet property="productCellName" destination="xFe-dc-ePd" id="deV-F4-0Yy"/>
                                     <outlet property="productCellPrice" destination="E9E-Qy-tjm" id="ZBm-54-lmr"/>
-                                    <segue destination="vTO-4l-UJl" kind="show" id="cV7-3L-qsh"/>
+                                    <segue destination="vTO-4l-UJl" kind="show" identifier="ShowProductDetail" id="cV7-3L-qsh"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -700,10 +700,10 @@
             </objects>
             <point key="canvasLocation" x="1812" y="764"/>
         </scene>
-        <!--Detail View Controller-->
+        <!--Detail Product View Controller-->
         <scene sceneID="BF0-sq-mv5">
             <objects>
-                <viewController id="vTO-4l-UJl" customClass="DetailViewController" customModule="UnderArmour" sceneMemberID="viewController">
+                <viewController id="vTO-4l-UJl" customClass="DetailProductViewController" customModule="UnderArmour" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sde-tT-Oxj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -738,7 +738,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kids_bottoms_prev" translatesAutoresizingMaskIntoConstraints="NO" id="cp2-Er-oXA">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="cp2-Er-oXA">
                                                 <rect key="frame" x="17" y="197" width="374" height="355"/>
                                             </imageView>
                                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="woa-Ve-F9R" userLabel="Horizontal Scrollview">
@@ -888,20 +888,65 @@
                     </view>
                     <navigationItem key="navigationItem" id="80f-v7-Ga2"/>
                     <connections>
-                        <outlet property="btnAddToBag" destination="RX5-Ci-1mT" id="oBU-Be-t3E"/>
-                        <outlet property="btnFavorite" destination="Vbw-cq-CiT" id="fBk-ph-htx"/>
-                        <outlet property="categoryDetailTxt" destination="Lca-tR-POd" id="E3m-IM-qvA"/>
-                        <outlet property="horizontalScrollView" destination="woa-Ve-F9R" id="SzY-il-6Ne"/>
-                        <outlet property="horizontalScrollableStackView" destination="OOE-mo-QIy" id="Qw9-tC-Ewh"/>
-                        <outlet property="productDetailTxt" destination="2ZL-8L-Lhs" id="0aq-S6-TBa"/>
-                        <outlet property="productImage" destination="cp2-Er-oXA" id="3Ne-M8-u1d"/>
-                        <outlet property="productNameTxt" destination="9AV-Rq-jPX" id="rYj-tO-PJG"/>
-                        <outlet property="productPriceTxt" destination="F63-jp-Ahk" id="Vfk-8U-xpP"/>
+                        <outlet property="btnAddToBag" destination="RX5-Ci-1mT" id="JkO-Rv-qwj"/>
+                        <outlet property="btnFavorite" destination="Vbw-cq-CiT" id="Nvo-Gd-vN9"/>
+                        <outlet property="categoryDetailTxt" destination="Lca-tR-POd" id="3fa-vi-WcP"/>
+                        <outlet property="horizontalScrollView" destination="woa-Ve-F9R" id="VUI-gW-CA5"/>
+                        <outlet property="horizontalScrollableStackView" destination="OOE-mo-QIy" id="0Ar-sD-Lvf"/>
+                        <outlet property="productDetailTxt" destination="2ZL-8L-Lhs" id="BgD-Ai-cVn"/>
+                        <outlet property="productImage" destination="cp2-Er-oXA" id="sLp-vG-0DM"/>
+                        <outlet property="productNameTxt" destination="9AV-Rq-jPX" id="0dd-wv-Vdb"/>
+                        <outlet property="productPriceTxt" destination="F63-jp-Ahk" id="sp8-yw-jyx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4fR-0d-fJu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3270" y="88"/>
+        </scene>
+        <!--Image Detail View Controller-->
+        <scene sceneID="gjL-Ms-rfX">
+            <objects>
+                <viewController storyboardIdentifier="imageDetailView" id="VBA-GO-fGh" customClass="ImageDetailViewController" customModule="UnderArmour" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BGW-Ac-Wv1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jpp-8n-FLn">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="xQf-Qs-0od">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="783"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="xQf-Qs-0od" firstAttribute="leading" secondItem="jpp-8n-FLn" secondAttribute="leading" id="3vC-EA-KO7"/>
+                                    <constraint firstItem="xQf-Qs-0od" firstAttribute="height" secondItem="jpp-8n-FLn" secondAttribute="height" multiplier="0.957213" id="DO1-L6-sz6"/>
+                                    <constraint firstItem="xQf-Qs-0od" firstAttribute="top" secondItem="jpp-8n-FLn" secondAttribute="top" id="OeT-qB-63b"/>
+                                    <constraint firstItem="xQf-Qs-0od" firstAttribute="width" secondItem="jpp-8n-FLn" secondAttribute="width" id="Uk7-aX-YTe"/>
+                                    <constraint firstAttribute="trailing" secondItem="xQf-Qs-0od" secondAttribute="trailing" id="uwr-LF-lBd"/>
+                                    <constraint firstAttribute="bottom" secondItem="xQf-Qs-0od" secondAttribute="bottom" constant="35" id="zP3-Mb-rCz"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="Fi2-KE-Vfx"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="wk6-ze-yT9"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="RGK-nP-WJb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jpp-8n-FLn" firstAttribute="centerX" secondItem="RGK-nP-WJb" secondAttribute="centerX" id="ai8-zK-B0y"/>
+                            <constraint firstItem="jpp-8n-FLn" firstAttribute="leading" secondItem="RGK-nP-WJb" secondAttribute="leading" id="iNV-ZJ-0s0"/>
+                            <constraint firstItem="jpp-8n-FLn" firstAttribute="centerY" secondItem="RGK-nP-WJb" secondAttribute="centerY" id="kGw-a0-Hgy"/>
+                            <constraint firstItem="jpp-8n-FLn" firstAttribute="bottom" secondItem="RGK-nP-WJb" secondAttribute="bottom" id="sWO-UP-rhZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="xQf-Qs-0od" id="7w2-ag-PGy"/>
+                        <outlet property="scrollView" destination="jpp-8n-FLn" id="R2J-s8-Ohk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bvw-Q2-Dlv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4004" y="88"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
@@ -916,7 +961,7 @@
         <image name="home_category_04" width="1067" height="700"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="hr_02" width="200" height="200"/>
-        <image name="kids_bottoms_prev" width="612" height="650"/>
+        <image name="image_placeholder" width="493" height="391"/>
         <image name="logo_black" width="800" height="800"/>
         <image name="men_bottoms_prev" width="612" height="650"/>
         <image name="men_shoes_prev" width="612" height="650"/>
@@ -924,7 +969,6 @@
         <image name="person.circle" catalog="system" width="128" height="121"/>
         <image name="rectangle.split.3x3.fill" catalog="system" width="128" height="93"/>
         <image name="slider.horizontal.3" catalog="system" width="128" height="100"/>
-        <image name="women_tops_prev" width="612" height="650"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

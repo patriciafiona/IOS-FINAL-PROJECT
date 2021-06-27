@@ -19,7 +19,9 @@
 		F773F8AE268886E90058377A /* ListProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F773F8AD268886E90058377A /* ListProductsViewController.swift */; };
 		F773F8B02688A8A00058377A /* Entities.swift in Sources */ = {isa = PBXBuildFile; fileRef = F773F8AF2688A8A00058377A /* Entities.swift */; };
 		F773F8B22688C2BD0058377A /* FetchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F773F8B12688C2BD0058377A /* FetchData.swift */; };
-		F773F8B62688D51D0058377A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F773F8B52688D51C0058377A /* DetailViewController.swift */; };
+		F773F8B62688D51D0058377A /* DetailProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F773F8B52688D51C0058377A /* DetailProductViewController.swift */; };
+		F773F8B92688DF600058377A /* ImageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F773F8B82688DF600058377A /* ImageDetailViewController.swift */; };
+		F773F8BC2688E8CE0058377A /* FetchImageURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = F773F8BB2688E8CD0058377A /* FetchImageURL.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -65,7 +67,9 @@
 		F773F8AD268886E90058377A /* ListProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListProductsViewController.swift; sourceTree = "<group>"; };
 		F773F8AF2688A8A00058377A /* Entities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entities.swift; sourceTree = "<group>"; };
 		F773F8B12688C2BD0058377A /* FetchData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchData.swift; sourceTree = "<group>"; };
-		F773F8B52688D51C0058377A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		F773F8B52688D51C0058377A /* DetailProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailProductViewController.swift; sourceTree = "<group>"; };
+		F773F8B82688DF600058377A /* ImageDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailViewController.swift; sourceTree = "<group>"; };
+		F773F8BB2688E8CD0058377A /* FetchImageURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchImageURL.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				F72DC07826861CD1003004CC /* Main.storyboard */,
+				F773F8BB2688E8CD0058377A /* FetchImageURL.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -166,7 +171,8 @@
 				F72DC07626861CD1003004CC /* HomeViewController.swift */,
 				F773F8AB268809600058377A /* CategoriesViewController.swift */,
 				F773F8AD268886E90058377A /* ListProductsViewController.swift */,
-				F773F8B52688D51C0058377A /* DetailViewController.swift */,
+				F773F8B52688D51C0058377A /* DetailProductViewController.swift */,
+				F773F8B82688DF600058377A /* ImageDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -270,12 +276,14 @@
 			files = (
 				F72DC07726861CD1003004CC /* HomeViewController.swift in Sources */,
 				F773F8B22688C2BD0058377A /* FetchData.swift in Sources */,
+				F773F8BC2688E8CE0058377A /* FetchImageURL.swift in Sources */,
 				F773F8AE268886E90058377A /* ListProductsViewController.swift in Sources */,
 				F72DC07326861CD1003004CC /* AppDelegate.swift in Sources */,
 				F773F8B02688A8A00058377A /* Entities.swift in Sources */,
 				F773F8AC268809600058377A /* CategoriesViewController.swift in Sources */,
 				F72DC07526861CD1003004CC /* SceneDelegate.swift in Sources */,
-				F773F8B62688D51D0058377A /* DetailViewController.swift in Sources */,
+				F773F8B92688DF600058377A /* ImageDetailViewController.swift in Sources */,
+				F773F8B62688D51D0058377A /* DetailProductViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
