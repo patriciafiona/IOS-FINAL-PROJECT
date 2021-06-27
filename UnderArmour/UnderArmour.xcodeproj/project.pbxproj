@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,7 @@
 		F72DC07F26861CE0003004CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F72DC07D26861CE0003004CC /* LaunchScreen.storyboard */; };
 		F773F89F26870F310058377A /* Pods_UnderArmour.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F773F89E26870F310058377A /* Pods_UnderArmour.framework */; };
 		F773F8A026870F310058377A /* Pods_UnderArmour.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F773F89E26870F310058377A /* Pods_UnderArmour.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F773F8AC268809600058377A /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F773F8AB268809600058377A /* CategoriesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -56,6 +57,7 @@
 		F773F89126870C9D0058377A /* ZKCarousel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ZKCarousel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F773F89E26870F310058377A /* Pods_UnderArmour.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_UnderArmour.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F773F8A62687250A0058377A /* SwiftImageCarousel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftImageCarousel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F773F8AB268809600058377A /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				F72DC07626861CD1003004CC /* HomeViewController.swift */,
+				F773F8AB268809600058377A /* CategoriesViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 			files = (
 				F72DC07726861CD1003004CC /* HomeViewController.swift in Sources */,
 				F72DC07326861CD1003004CC /* AppDelegate.swift in Sources */,
+				F773F8AC268809600058377A /* CategoriesViewController.swift in Sources */,
 				F72DC07526861CD1003004CC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
