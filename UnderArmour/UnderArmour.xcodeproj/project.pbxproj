@@ -16,6 +16,10 @@
 		F773F89F26870F310058377A /* Pods_UnderArmour.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F773F89E26870F310058377A /* Pods_UnderArmour.framework */; };
 		F773F8A026870F310058377A /* Pods_UnderArmour.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F773F89E26870F310058377A /* Pods_UnderArmour.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F773F8AC268809600058377A /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F773F8AB268809600058377A /* CategoriesViewController.swift */; };
+		F773F8AE268886E90058377A /* ListProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F773F8AD268886E90058377A /* ListProductsViewController.swift */; };
+		F773F8B02688A8A00058377A /* Entities.swift in Sources */ = {isa = PBXBuildFile; fileRef = F773F8AF2688A8A00058377A /* Entities.swift */; };
+		F773F8B22688C2BD0058377A /* FetchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F773F8B12688C2BD0058377A /* FetchData.swift */; };
+		F773F8B62688D51D0058377A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F773F8B52688D51C0058377A /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -58,6 +62,10 @@
 		F773F89E26870F310058377A /* Pods_UnderArmour.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_UnderArmour.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F773F8A62687250A0058377A /* SwiftImageCarousel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftImageCarousel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F773F8AB268809600058377A /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
+		F773F8AD268886E90058377A /* ListProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListProductsViewController.swift; sourceTree = "<group>"; };
+		F773F8AF2688A8A00058377A /* Entities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entities.swift; sourceTree = "<group>"; };
+		F773F8B12688C2BD0058377A /* FetchData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchData.swift; sourceTree = "<group>"; };
+		F773F8B52688D51C0058377A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +154,8 @@
 		F72DC08826861F07003004CC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F773F8AF2688A8A00058377A /* Entities.swift */,
+				F773F8B12688C2BD0058377A /* FetchData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -155,6 +165,8 @@
 			children = (
 				F72DC07626861CD1003004CC /* HomeViewController.swift */,
 				F773F8AB268809600058377A /* CategoriesViewController.swift */,
+				F773F8AD268886E90058377A /* ListProductsViewController.swift */,
+				F773F8B52688D51C0058377A /* DetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -257,9 +269,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F72DC07726861CD1003004CC /* HomeViewController.swift in Sources */,
+				F773F8B22688C2BD0058377A /* FetchData.swift in Sources */,
+				F773F8AE268886E90058377A /* ListProductsViewController.swift in Sources */,
 				F72DC07326861CD1003004CC /* AppDelegate.swift in Sources */,
+				F773F8B02688A8A00058377A /* Entities.swift in Sources */,
 				F773F8AC268809600058377A /* CategoriesViewController.swift in Sources */,
 				F72DC07526861CD1003004CC /* SceneDelegate.swift in Sources */,
+				F773F8B62688D51D0058377A /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

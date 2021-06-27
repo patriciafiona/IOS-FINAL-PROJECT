@@ -20,25 +20,12 @@ class CategoriesViewController: UIViewController, UITabBarControllerDelegate{
     @IBOutlet weak var categoryBottomsImg: UIImageView!
     @IBOutlet weak var categoryShoesImg: UIImageView!
     
-    @IBOutlet weak var seeTopsBtn: UIButton!
-    @IBOutlet weak var seeBottomsBtn: UIButton!
-    @IBOutlet weak var seeShoesBtn: UIButton!
-    
     private var currentPosition: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         showCurrentCategeory(currentPosition)
    }
-    
-    @IBAction func seeTopsOnClick(_ sender: Any) {
-    }
-    
-    @IBAction func seeBottomsOnClick(_ sender: Any) {
-    }
-    
-    @IBAction func seeShoesOnClick(_ sender: Any) {
-    }
     
     @IBAction func MenOnClick(_ sender: Any) {
         currentPosition = 0
@@ -89,5 +76,22 @@ class CategoriesViewController: UIViewController, UITabBarControllerDelegate{
         showCurrentCategeory(tabBarIndex)
         print("index: \(tabBarIndex)")
    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let listProductViewController = segue.destination as! ListProductsViewController
+        
+        listProductViewController.category = categoryTitle.text ?? ""
+        
+        if segue.identifier == "seeTopsSeague"{
+            listProductViewController.tag = "Tops"
+            
+        }else if segue.identifier == "seeBottomsSeague"{
+            listProductViewController.tag = "Bottoms"
+            
+        }else if segue.identifier == "seeShoesSeague"{
+            listProductViewController.tag = "Shoes"
+        }
+        
+    }
     
 }
