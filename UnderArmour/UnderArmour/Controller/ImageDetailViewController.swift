@@ -16,7 +16,10 @@ class ImageDetailViewController: UIViewController, UIScrollViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        FetchImageURL().setImageToImageView(imageContainer: imageView, imageUrl: "http://127.0.0.1:3000/images/\(imageName)")
+        
+        print("Image Name: \(imageName ?? "product_default.png")")
+        let url = "http://127.0.0.1:3000/images/\(imageName ?? "product_default.png")"
+        FetchImageURL().setImageToImageView(imageContainer: imageView, imageUrl: url)
         
         scrollView.delegate = self
         updateZoomFor(view.bounds.size)
