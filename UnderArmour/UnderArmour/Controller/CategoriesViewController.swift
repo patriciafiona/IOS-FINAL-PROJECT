@@ -81,15 +81,23 @@ class CategoriesViewController: UIViewController, UITabBarControllerDelegate{
         let listProductViewController = segue.destination as! ListProductsViewController
         
         listProductViewController.category = categoryTitle.text ?? ""
+        var tag = ""
         
         if segue.identifier == "seeTopsSeague"{
-            listProductViewController.tag = "Tops"
-            
+            tag = "Tops"
         }else if segue.identifier == "seeBottomsSeague"{
-            listProductViewController.tag = "Bottoms"
+            tag = "Bottoms"
             
         }else if segue.identifier == "seeShoesSeague"{
-            listProductViewController.tag = "Shoes"
+            tag = "Shoes"
+        }
+        
+        listProductViewController.tag = tag
+        
+        if tag != ""{
+            listProductViewController.navigationItem.title = "\(categoryTitle.text ?? "") - \(tag) Collections"
+        }else{
+            listProductViewController.navigationItem.title = "\(categoryTitle.text ?? "") Collections"
         }
         
     }

@@ -56,43 +56,95 @@ class DetailProductViewController: UIViewController{
     private func setHorizontallScroll(){
         //create empty image
         let imgProducts_01 = UIImageView(image: UIImage(named: "image_placeholder"))
-        let imgProducts_02 = UIImageView(image: UIImage(named: "image_placeholder"))
-        let imgProducts_03 = UIImageView(image: UIImage(named: "image_placeholder"))
         
         FetchImageURL().setImageToImageView(imageContainer: imgProducts_01, imageUrl: "http://127.0.0.1:3000/images/\(product!.photo_01)")
-        FetchImageURL().setImageToImageView(imageContainer: imgProducts_02, imageUrl: "http://127.0.0.1:3000/images/\(product!.photo_02)")
-        FetchImageURL().setImageToImageView(imageContainer: imgProducts_03, imageUrl: "http://127.0.0.1:3000/images/\(product!.photo_03)")
         
         imgProducts_01.translatesAutoresizingMaskIntoConstraints = false
         imgProducts_01.widthAnchor.constraint(equalToConstant: horizontalScrollableStackView.frame.height).isActive = true
         
-        imgProducts_02.translatesAutoresizingMaskIntoConstraints = false
-        imgProducts_02.widthAnchor.constraint(equalToConstant: horizontalScrollableStackView.frame.height).isActive = true
-        
-        imgProducts_03.translatesAutoresizingMaskIntoConstraints = false
-        imgProducts_03.widthAnchor.constraint(equalToConstant: horizontalScrollableStackView.frame.height).isActive = true
-        
         imgProducts_01.frame = CGRect(x: 0, y: 0, width: 25, height: 200)
-        imgProducts_02.frame = CGRect(x: 0, y: 0, width: 25, height: 200)
-        imgProducts_03.frame = CGRect(x: 0, y: 0, width: 25, height: 200)
         
-        //add tap gesture lsitener
         let tapGesture01 = UITapGestureRecognizer(target: self, action: #selector(DetailProductViewController.imageTapped(gesture:)))
-        let tapGesture02 = UITapGestureRecognizer(target: self, action: #selector(DetailProductViewController.imageTapped02(gesture:)))
-        let tapGesture03 = UITapGestureRecognizer(target: self, action: #selector(DetailProductViewController.imageTapped03(gesture:)))
-
+        
         imgProducts_01.addGestureRecognizer(tapGesture01)
-        imgProducts_02.addGestureRecognizer(tapGesture02)
-        imgProducts_03.addGestureRecognizer(tapGesture03)
-        
         imgProducts_01.isUserInteractionEnabled = true
-        imgProducts_02.isUserInteractionEnabled = true
-        imgProducts_03.isUserInteractionEnabled = true
-        
-        //add to horizontal view
         horizontalScrollableStackView.addArrangedSubview(imgProducts_01)
-        horizontalScrollableStackView.addArrangedSubview(imgProducts_02)
-        horizontalScrollableStackView.addArrangedSubview(imgProducts_03)
+        
+        // Image 02 -------------------------------------
+        if product!.photo_02 != ""{
+            let imgProducts_02 = UIImageView(image: UIImage(named: "image_placeholder"))
+            
+            FetchImageURL().setImageToImageView(imageContainer: imgProducts_02, imageUrl: "http://127.0.0.1:3000/images/\(product!.photo_02)")
+            
+            imgProducts_02.translatesAutoresizingMaskIntoConstraints = false
+            imgProducts_02.widthAnchor.constraint(equalToConstant: horizontalScrollableStackView.frame.height).isActive = true
+            
+            imgProducts_02.frame = CGRect(x: 0, y: 0, width: 25, height: 200)
+            
+            let tapGesture02 = UITapGestureRecognizer(target: self, action: #selector(DetailProductViewController.imageTapped02(gesture:)))
+            imgProducts_02.addGestureRecognizer(tapGesture02)
+            imgProducts_02.isUserInteractionEnabled = true
+            
+            horizontalScrollableStackView.addArrangedSubview(imgProducts_02)
+        }
+        
+        // Image 03 -------------------------------------
+        
+        if product!.photo_03 != ""{
+            let imgProducts_03 = UIImageView(image: UIImage(named: "image_placeholder"))
+            
+            FetchImageURL().setImageToImageView(imageContainer: imgProducts_03, imageUrl: "http://127.0.0.1:3000/images/\(product!.photo_03)")
+
+            imgProducts_03.translatesAutoresizingMaskIntoConstraints = false
+            imgProducts_03.widthAnchor.constraint(equalToConstant: horizontalScrollableStackView.frame.height).isActive = true
+            imgProducts_03.frame = CGRect(x: 0, y: 0, width: 25, height: 200)
+            
+            let tapGesture03 = UITapGestureRecognizer(target: self, action: #selector(DetailProductViewController.imageTapped03(gesture:)))
+
+            imgProducts_03.addGestureRecognizer(tapGesture03)
+            imgProducts_03.isUserInteractionEnabled = true
+            
+            horizontalScrollableStackView.addArrangedSubview(imgProducts_03)
+        }
+        
+        // Image 04 -------------------------------------
+        
+        if product!.photo_04 != ""{
+            let imgProducts_04 = UIImageView(image: UIImage(named: "image_placeholder"))
+            
+            FetchImageURL().setImageToImageView(imageContainer: imgProducts_04, imageUrl: "http://127.0.0.1:3000/images/\(product!.photo_04)")
+
+            imgProducts_04.translatesAutoresizingMaskIntoConstraints = false
+            imgProducts_04.widthAnchor.constraint(equalToConstant: horizontalScrollableStackView.frame.height).isActive = true
+            imgProducts_04.frame = CGRect(x: 0, y: 0, width: 25, height: 200)
+            
+            let tapGesture04 = UITapGestureRecognizer(target: self, action: #selector(DetailProductViewController.imageTapped04(gesture:)))
+
+            imgProducts_04.addGestureRecognizer(tapGesture04)
+            imgProducts_04.isUserInteractionEnabled = true
+            
+            horizontalScrollableStackView.addArrangedSubview(imgProducts_04)
+        }
+        
+        // Image 05 -------------------------------------
+        
+        if product!.photo_05 != ""{
+            let imgProducts_05 = UIImageView(image: UIImage(named: "image_placeholder"))
+            
+            FetchImageURL().setImageToImageView(imageContainer: imgProducts_05, imageUrl: "http://127.0.0.1:3000/images/\(product!.photo_05)")
+
+            imgProducts_05.translatesAutoresizingMaskIntoConstraints = false
+            imgProducts_05.widthAnchor.constraint(equalToConstant: horizontalScrollableStackView.frame.height).isActive = true
+            imgProducts_05.frame = CGRect(x: 0, y: 0, width: 25, height: 200)
+            
+            let tapGesture05 = UITapGestureRecognizer(target: self, action: #selector(DetailProductViewController.imageTapped05(gesture:)))
+
+            imgProducts_05.addGestureRecognizer(tapGesture05)
+            imgProducts_05.isUserInteractionEnabled = true
+            
+            horizontalScrollableStackView.addArrangedSubview(imgProducts_05)
+        }
+        
     }
     
     private func setShadow(view: UIView){
@@ -155,6 +207,26 @@ class DetailProductViewController: UIViewController{
             let imageDetailPage = self.storyboard?.instantiateViewController(withIdentifier: "imageDetailView") as! ImageDetailViewController
             
             imageDetailPage.imageName = product?.photo_03
+            
+            self.navigationController?.pushViewController(imageDetailPage, animated: true)
+        }
+    }
+    
+    @objc private func imageTapped04(gesture: UIGestureRecognizer) {
+        if (gesture.view as? UIImageView) != nil {
+            let imageDetailPage = self.storyboard?.instantiateViewController(withIdentifier: "imageDetailView") as! ImageDetailViewController
+            
+            imageDetailPage.imageName = product?.photo_04
+            
+            self.navigationController?.pushViewController(imageDetailPage, animated: true)
+        }
+    }
+    
+    @objc private func imageTapped05(gesture: UIGestureRecognizer) {
+        if (gesture.view as? UIImageView) != nil {
+            let imageDetailPage = self.storyboard?.instantiateViewController(withIdentifier: "imageDetailView") as! ImageDetailViewController
+            
+            imageDetailPage.imageName = product?.photo_05
             
             self.navigationController?.pushViewController(imageDetailPage, animated: true)
         }

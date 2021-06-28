@@ -22,7 +22,7 @@ class FetchData{
                 if error != nil || data == nil{
                     print("An error occured while fetching data from API")
                 }else{
-                    if let responseText = String.init(data: data!, encoding: .ascii){
+                    if let responseText = String.init(data: data!, encoding: .utf8){
                         let jsonData = responseText.data(using: .utf8)!
                         ProductSpace = try! JSONDecoder().decode([Products].self, from: jsonData)
                         completionHandler(ProductSpace)

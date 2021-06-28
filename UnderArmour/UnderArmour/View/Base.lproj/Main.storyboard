@@ -570,7 +570,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Men" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kzv-Yy-efW">
-                                <rect key="frame" x="107" y="205" width="200" height="31.5"/>
+                                <rect key="frame" x="107" y="205.5" width="200" height="31.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -611,7 +611,7 @@
             </objects>
             <point key="canvasLocation" x="1811.594202898551" y="87.723214285714278"/>
         </scene>
-        <!--List Products View Controller-->
+        <!--Title-->
         <scene sceneID="TJz-WN-Vlk">
             <objects>
                 <tableViewController id="7e6-zy-5AZ" customClass="ListProductsViewController" customModule="UnderArmour" customModuleProvider="target" sceneMemberID="viewController">
@@ -678,7 +678,7 @@
                             <outlet property="delegate" destination="7e6-zy-5AZ" id="jAb-69-3G8"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="PKv-VE-sZZ"/>
+                    <navigationItem key="navigationItem" title="Title" id="R3B-zV-GqG"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2U9-9k-SEh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -725,7 +725,7 @@
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Product Name" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9AV-Rq-jPX">
                                                 <rect key="frame" x="21" y="131.5" width="227" height="38.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
