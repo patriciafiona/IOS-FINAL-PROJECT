@@ -12,7 +12,6 @@ class DetailProductViewController: UIViewController{
     
     var product: Products?
     
-    
     @IBOutlet weak var horizontalScrollableStackView: UIStackView!
     @IBOutlet weak var horizontalScrollView: UIScrollView!
     
@@ -85,7 +84,7 @@ class DetailProductViewController: UIViewController{
             var jsonArray: [[String: Int]] = getListFav as! [[String : Int]]
             
             if checkProductInListFav(jsonArray) == false{
-                print("Not yet in cart")
+                print("Not yet in fav")
                 
                 let json = (["product_id": product!.id])
                 jsonArray.append(json )
@@ -97,7 +96,7 @@ class DetailProductViewController: UIViewController{
                 
                 print(jsonArray)
             }else{
-                print("Already in cart, remove from the List")
+                print("Already in fav, remove from the List")
                 upadteBtnFav(false)
                 
                 let currentProduct = (["product_id": product!.id])

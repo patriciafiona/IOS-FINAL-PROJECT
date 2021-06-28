@@ -34,13 +34,35 @@ class ListFavoriteViewController: UITableViewController{
     }
     
     override func viewDidLoad() {
-        getAndSetData()
+        listId = ""
+        url = ""
         super.viewDidLoad()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        getAndSetData()
-        super.viewWillAppear(animated)
+    override func viewDidAppear(_ animated: Bool) {
+        listId = ""
+        url = ""
+        
+        if UserDefaults.standard.object(forKey: "listFavorites") != nil{
+            let getListFav = UserDefaults.standard.object(forKey: "listFavorites") as! [[String : Int]]
+            if !getListFav.isEmpty{
+                getAndSetData()
+            }else{
+                print("Data Empty")
+                
+                //clear all table row
+                productsSpace = []
+                self.tableView.reloadData()
+            }
+        }else{
+            print("Data Empty - list not yet created")
+            
+            //clear all table row
+            productsSpace = []
+            self.tableView.reloadData()
+        }
+        
+        super.viewDidAppear(animated)
     }
     
     private func getAndSetData(){
@@ -52,6 +74,8 @@ class ListFavoriteViewController: UITableViewController{
         url.queryItems = [
             URLQueryItem(name: "ids", value: listId)
         ]
+        
+        print(url)
         
         FetchData().fetchDataWithParams(urlForFetchingData: url, completionHandler: {
             productArray in self.productsSpace = productArray
@@ -74,6 +98,7 @@ class ListFavoriteViewController: UITableViewController{
                 }
             }
         }else{
+            listId = ""
             print("No Favorite Products")
         }
     }

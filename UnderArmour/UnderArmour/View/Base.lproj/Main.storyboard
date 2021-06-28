@@ -692,7 +692,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vYM-KG-ZUB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2545" y="760"/>
+            <point key="canvasLocation" x="1811.594202898551" y="772.76785714285711"/>
         </scene>
         <!--Title-->
         <scene sceneID="TJz-WN-Vlk">
@@ -859,7 +859,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" id="gGx-2e-1ES" userLabel="Navbar">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="61"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="424" height="61"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_black" translatesAutoresizingMaskIntoConstraints="NO" id="Nn7-3I-YF9">
@@ -869,7 +869,7 @@
                                                         </constraints>
                                                     </imageView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tg9-SU-Awr" userLabel="user_btn">
-                                                        <rect key="frame" x="363" y="0.0" width="51" height="65"/>
+                                                        <rect key="frame" x="373" y="0.0" width="51" height="65"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="51" id="xmG-gg-cCS"/>
                                                         </constraints>
@@ -879,7 +879,7 @@
                                                         </state>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7B6-Wz-C1L" userLabel="shopping_cart_btn">
-                                                        <rect key="frame" x="304" y="0.0" width="51" height="65"/>
+                                                        <rect key="frame" x="314" y="0.0" width="51" height="65"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="51" id="e7H-5n-3Q3"/>
                                                         </constraints>
