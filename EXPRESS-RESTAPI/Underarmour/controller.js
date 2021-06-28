@@ -74,3 +74,31 @@ exports.productsById = function(req, res) {
         }
     });
 };
+
+exports.productsByManyId = function(req, res) {
+
+    const ids = req.query.ids; 
+    const idsArr = ids.split(',')
+    pool.query('Select products.*, categories.name AS category_name, '+
+                    'tags.name AS tag_name, photos.photo_01, photos.photo_02, '+
+                    'photos.photo_03, photos.photo_04, photos.photo_05 from products '+
+                    'INNER JOIN categories ON products.category = categories.id '+
+                    'INNER JOIN tags ON products.tag = tags.id '+
+                    'INNER JOIN photos ON products.id = photos.product_id '+
+                    'WHERE products.id IN (?) ', [idsArr], 
+                    function (error, rows, fields){
+        if(error){
+            console.log(error)
+        } else{
+            response.ok('productsByManyId', rows, res)
+        }
+    });
+
+    console.log('Select products.*, categories.name AS category_name, '+
+                    'tags.name AS tag_name, photos.photo_01, photos.photo_02, '+
+                    'photos.photo_03, photos.photo_04, photos.photo_05 from products '+
+                    'INNER JOIN categories ON products.category = categories.id '+
+                    'INNER JOIN tags ON products.tag = tags.id '+
+                    'INNER JOIN photos ON products.id = photos.product_id '+
+                    'WHERE products.id IN ('+ req.query.ids +') ')
+};

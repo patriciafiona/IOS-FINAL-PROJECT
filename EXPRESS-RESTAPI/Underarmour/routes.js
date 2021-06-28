@@ -21,4 +21,7 @@ module.exports = function(app) {
     app.route('/product_details/:product_id')
         .get(todoList.productsById);
 
+    app.route('/productFavorite/')
+        .get(todoList.productsByManyId);
+
 };
