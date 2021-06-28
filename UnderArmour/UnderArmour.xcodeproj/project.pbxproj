@@ -22,6 +22,7 @@
 		F773F8B62688D51D0058377A /* DetailProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F773F8B52688D51C0058377A /* DetailProductViewController.swift */; };
 		F773F8B92688DF600058377A /* ImageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F773F8B82688DF600058377A /* ImageDetailViewController.swift */; };
 		F773F8BC2688E8CE0058377A /* FetchImageURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = F773F8BB2688E8CD0058377A /* FetchImageURL.swift */; };
+		F773F8BE2689F72D0058377A /* ListFavoriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F773F8BD2689F7290058377A /* ListFavoriteViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -70,6 +71,7 @@
 		F773F8B52688D51C0058377A /* DetailProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailProductViewController.swift; sourceTree = "<group>"; };
 		F773F8B82688DF600058377A /* ImageDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailViewController.swift; sourceTree = "<group>"; };
 		F773F8BB2688E8CD0058377A /* FetchImageURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchImageURL.swift; sourceTree = "<group>"; };
+		F773F8BD2689F7290058377A /* ListFavoriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFavoriteViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +175,7 @@
 				F773F8AD268886E90058377A /* ListProductsViewController.swift */,
 				F773F8B52688D51C0058377A /* DetailProductViewController.swift */,
 				F773F8B82688DF600058377A /* ImageDetailViewController.swift */,
+				F773F8BD2689F7290058377A /* ListFavoriteViewModel.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 				F72DC07526861CD1003004CC /* SceneDelegate.swift in Sources */,
 				F773F8B92688DF600058377A /* ImageDetailViewController.swift in Sources */,
 				F773F8B62688D51D0058377A /* DetailProductViewController.swift in Sources */,
+				F773F8BE2689F72D0058377A /* ListFavoriteViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
