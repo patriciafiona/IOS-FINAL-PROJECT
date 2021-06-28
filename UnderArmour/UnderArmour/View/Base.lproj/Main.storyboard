@@ -382,7 +382,7 @@
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="eua-gA-yLm"/>
                         <segue destination="4ya-WB-GgH" kind="relationship" relationship="viewControllers" id="I81-c7-aE1"/>
-                        <segue destination="zs7-wY-KXp" kind="relationship" relationship="viewControllers" id="7LV-Gb-TPJ"/>
+                        <segue destination="8bC-nP-3ua" kind="relationship" relationship="viewControllers" id="ibQ-fs-n8o"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dJ2-Ka-cx0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -621,6 +621,36 @@
             <point key="canvasLocation" x="1811.594202898551" y="87.723214285714278"/>
         </scene>
         <!--Title-->
+        <scene sceneID="aLQ-61-3TA">
+            <objects>
+                <tableViewController id="8bC-nP-3ua" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="9eV-o5-sKw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Wrs-QW-v10">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Wrs-QW-v10" id="fxK-z6-INY">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="8bC-nP-3ua" id="5hZ-NX-KUD"/>
+                            <outlet property="delegate" destination="8bC-nP-3ua" id="yIp-Jf-So2"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Favorites" image="heart.fill" catalog="system" id="pVc-vx-Nj4"/>
+                    <navigationItem key="navigationItem" title="Title" id="2qU-0V-P0U"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vYM-KG-ZUB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1812" y="748"/>
+        </scene>
+        <!--Title-->
         <scene sceneID="TJz-WN-Vlk">
             <objects>
                 <tableViewController id="7e6-zy-5AZ" customClass="ListProductsViewController" customModule="UnderArmour" customModuleProvider="target" sceneMemberID="viewController">
@@ -692,22 +722,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2U9-9k-SEh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2544.9275362318845" y="87.723214285714278"/>
-        </scene>
-        <!--Settings-->
-        <scene sceneID="4wg-hy-Uhy">
-            <objects>
-                <viewController id="zs7-wY-KXp" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5Mr-Pu-XeB">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="7JZ-0Z-bsg"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Settings" image="slider.horizontal.3" catalog="system" id="dxB-Ao-eqd"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="X3x-Bn-N3D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1812" y="764"/>
         </scene>
         <!--Detail Product View Controller-->
         <scene sceneID="BF0-sq-mv5">
@@ -782,7 +796,7 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vbw-cq-CiT">
                                                 <rect key="frame" x="17" y="887" width="372" height="63"/>
-                                                <color key="backgroundColor" red="0.89778059720000003" green="0.90602719779999996" blue="0.9136567712" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" systemColor="systemGray5Color"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="63" id="Y8M-5F-Lac"/>
                                                 </constraints>
@@ -790,6 +804,9 @@
                                                 <state key="normal" title="Favorite">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="favoriteBtnOnClick:" destination="vTO-4l-UJl" eventType="touchUpInside" id="Qn9-lv-nTW"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="500" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ZL-8L-Lhs">
                                                 <rect key="frame" x="19" y="975" width="370" height="20.5"/>
@@ -910,7 +927,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4fR-0d-fJu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3270" y="88"/>
+            <point key="canvasLocation" x="3269.5652173913045" y="87.723214285714278"/>
         </scene>
         <!--Image Detail View Controller-->
         <scene sceneID="gjL-Ms-rfX">
@@ -964,6 +981,7 @@
     <resources>
         <image name="bag" catalog="system" width="128" height="128"/>
         <image name="end_of_season_banner" width="1600" height="525"/>
+        <image name="heart.fill" catalog="system" width="128" height="109"/>
         <image name="home_category_01" width="1067" height="700"/>
         <image name="home_category_02" width="1067" height="700"/>
         <image name="home_category_03" width="1067" height="700"/>
@@ -977,7 +995,6 @@
         <image name="men_tops_prev" width="612" height="650"/>
         <image name="person.circle" catalog="system" width="128" height="121"/>
         <image name="rectangle.split.3x3.fill" catalog="system" width="128" height="93"/>
-        <image name="slider.horizontal.3" catalog="system" width="128" height="100"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -30,7 +30,6 @@ class ListProductsViewController: UITableViewController{
         didSet{
             DispatchQueue.main.async {
                 self.tableView.reloadData()
-                print(self.productsSpace)
             }
         }
     }

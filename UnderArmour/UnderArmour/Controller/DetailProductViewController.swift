@@ -34,6 +34,26 @@ class DetailProductViewController: UIViewController{
         
         setRoundedButton(button: btnAddToBag)
         setRoundedButton(button: btnFavorite)
+        
+        //check fav button status
+        if UserDefaults.standard.object(forKey: "listFavorites") != nil {
+            let getListFav = UserDefaults.standard.object(forKey: "listFavorites") as! [[String : Int]]
+            upadteBtnFav(checkProductInListFav(getListFav))
+        }
+    }
+    
+    private func upadteBtnFav(_ status: Bool){
+        if status{
+            //already in fav list
+            btnFavorite.setTitleColor(UIColor.white, for: .normal)
+            btnFavorite.setTitle("Unfavorite", for: .normal)
+            btnFavorite.backgroundColor = UIColor.red
+        }else{
+            //not yet in fav list
+            btnFavorite.setTitleColor(UIColor.black, for: .normal)
+            btnFavorite.setTitle("Favorite", for: .normal)
+            btnFavorite.backgroundColor = UIColor.systemGray5
+        }
     }
     
     private func setImageListener(){
@@ -42,6 +62,73 @@ class DetailProductViewController: UIViewController{
 
         productImage.addGestureRecognizer(tapGesture)
         productImage.isUserInteractionEnabled = true
+    }
+    
+    @IBAction func favoriteBtnOnClick(_ sender: Any) {
+        //check if data already in local storage
+        
+        let getListFav = UserDefaults.standard.object(forKey: "listFavorites")
+        
+        if getListFav == nil {
+            var jsonArray: [[String: Int]] = [[String: Int]]()
+
+            let json = (["product_id": product!.id])
+            jsonArray.append(json )
+            
+            //save in local storage
+            UserDefaults.standard.set(jsonArray, forKey: "listFavorites")
+            
+            upadteBtnFav(true)
+            
+            print(jsonArray)
+        }else{
+            var jsonArray: [[String: Int]] = getListFav as! [[String : Int]]
+            
+            if checkProductInListFav(jsonArray) == false{
+                print("Not yet in cart")
+                
+                let json = (["product_id": product!.id])
+                jsonArray.append(json )
+                
+                //save in local storage
+                UserDefaults.standard.set(jsonArray, forKey: "listFavorites")
+                
+                upadteBtnFav(true)
+                
+                print(jsonArray)
+            }else{
+                print("Already in cart, remove from the List")
+                upadteBtnFav(false)
+                
+                let currentProduct = (["product_id": product!.id])
+                if let index = jsonArray.firstIndex(of: currentProduct ) {
+                    jsonArray.remove(at: index)
+                }
+                
+                //update data in local storage
+                UserDefaults.standard.set(jsonArray, forKey: "listFavorites")
+                
+                print(jsonArray)
+            }
+            
+        }
+    }
+    
+    private func checkProductInListFav(_ jsonArray: [[String: Int]] ) -> Bool{
+        let currentProduct = (["product_id": product!.id])
+        
+        var result = false
+        
+        for product in jsonArray{
+            if product == currentProduct{
+                result = true
+                break
+            }else{
+                result = false
+            }
+        }
+        
+        return result
     }
     
     private func setDetails(){
