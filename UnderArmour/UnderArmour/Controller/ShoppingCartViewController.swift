@@ -62,6 +62,8 @@ class ShoppingCartViewController: UITableViewController{
             }else{
                 print("Data Empty")
                 
+                totalPriceText.text = "Rp. 0"
+                
                 let alert = UIAlertController(title: "Empty Shopping Cart", message: "You Don't Have any Product in Shopping Cart", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
                 
@@ -73,6 +75,8 @@ class ShoppingCartViewController: UITableViewController{
             }
         }else{
             print("Data Empty - list not yet created")
+            
+            totalPriceText.text = "Rp. 0"
             
             let alert = UIAlertController(title: "Empty Shopping Cart", message: "You Don't Have any Product in Shopping Cart", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
