@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F71DDE75268C55A200B67199 /* ShoppingCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71DDE74268C55A200B67199 /* ShoppingCartViewController.swift */; };
 		F72DC07326861CD1003004CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72DC07226861CD1003004CC /* AppDelegate.swift */; };
 		F72DC07526861CD1003004CC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72DC07426861CD1003004CC /* SceneDelegate.swift */; };
 		F72DC07726861CD1003004CC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72DC07626861CD1003004CC /* HomeViewController.swift */; };
@@ -44,6 +45,7 @@
 		99CDB1A38B339C83BB8CE30D /* Pods-UnderArmour.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnderArmour.release.xcconfig"; path = "Target Support Files/Pods-UnderArmour/Pods-UnderArmour.release.xcconfig"; sourceTree = "<group>"; };
 		D8E88146636E459B1968C559 /* Pods_UnderArmour.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UnderArmour.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F71DDE71268C214800B67199 /* iOSDropDown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = iOSDropDown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F71DDE74268C55A200B67199 /* ShoppingCartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartViewController.swift; sourceTree = "<group>"; };
 		F72DC06F26861CD1003004CC /* UnderArmour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnderArmour.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F72DC07226861CD1003004CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F72DC07426861CD1003004CC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 				F773F8B52688D51C0058377A /* DetailProductViewController.swift */,
 				F773F8B82688DF600058377A /* ImageDetailViewController.swift */,
 				F773F8BD2689F7290058377A /* ListFavoriteViewModel.swift */,
+				F71DDE74268C55A200B67199 /* ShoppingCartViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 				F773F8B02688A8A00058377A /* Entities.swift in Sources */,
 				F773F8AC268809600058377A /* CategoriesViewController.swift in Sources */,
 				F72DC07526861CD1003004CC /* SceneDelegate.swift in Sources */,
+				F71DDE75268C55A200B67199 /* ShoppingCartViewController.swift in Sources */,
 				F773F8B92688DF600058377A /* ImageDetailViewController.swift in Sources */,
 				F773F8B62688D51D0058377A /* DetailProductViewController.swift in Sources */,
 				F773F8BE2689F72D0058377A /* ListFavoriteViewModel.swift in Sources */,

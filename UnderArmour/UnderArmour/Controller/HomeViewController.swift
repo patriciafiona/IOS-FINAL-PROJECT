@@ -107,21 +107,23 @@ class HomeViewController: UIViewController, UIScrollViewDelegate{
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let listProductViewController = segue.destination as! ListProductsViewController
-        
         var category = ""
         
-        if segue.identifier == "seeMenSeague"{
-            category = "Men"
-        }else if segue.identifier == "seeWomenSeague"{
-            category = "Women"
-        }else if segue.identifier == "seeKidsSeague"{
-            category = "Kids"
+        if segue.identifier != "seeShoppingCart01"{
+            let listProductViewController = segue.destination as! ListProductsViewController
+            
+            if segue.identifier == "seeMenSeague"{
+                category = "Men"
+            }else if segue.identifier == "seeWomenSeague"{
+                category = "Women"
+            }else if segue.identifier == "seeKidsSeague"{
+                category = "Kids"
+            }
+            listProductViewController.category = category
+            listProductViewController.tag = "" //no tag for this section
+            
+            listProductViewController.navigationItem.title = "\(category) Collections"
         }
-        listProductViewController.category = category
-        listProductViewController.tag = "" //no tag for this section
-        
-        listProductViewController.navigationItem.title = "\(category) Collections"
         
     }
     
