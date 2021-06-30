@@ -50,12 +50,22 @@ class ListFavoriteViewController: UITableViewController{
             }else{
                 print("Data Empty")
                 
+                let alert = UIAlertController(title: "Empty Favorite List", message: "You Don't Have any Favorite Product", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+                
+                present(alert, animated: true, completion: nil)
+                
                 //clear all table row
                 productsSpace = []
                 self.tableView.reloadData()
             }
         }else{
             print("Data Empty - list not yet created")
+            
+            let alert = UIAlertController(title: "Empty Favorite List", message: "You Don't Have any Favorite Product", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+            
+            present(alert, animated: true, completion: nil)
             
             //clear all table row
             productsSpace = []
