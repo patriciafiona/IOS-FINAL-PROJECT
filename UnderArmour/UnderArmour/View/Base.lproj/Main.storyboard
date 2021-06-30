@@ -882,6 +882,9 @@
                                                 <state key="normal" title="Add to Bag">
                                                     <color key="titleColor" red="0.96071070430000005" green="0.96082574129999998" blue="0.96067160370000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="addRemoveProductShoppingCart:" destination="vTO-4l-UJl" eventType="touchUpInside" id="N2N-ba-uTy"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vbw-cq-CiT">
                                                 <rect key="frame" x="17" y="1127.5" width="372" height="63"/>
@@ -928,7 +931,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dKG-U9-Jcj" customClass="DropDown" customModule="iOSDropDown">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select Quantity" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dKG-U9-Jcj" customClass="DropDown" customModule="iOSDropDown">
                                                 <rect key="frame" x="20" y="956" width="363" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -939,7 +942,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WA9-tz-rZu" customClass="DropDown" customModule="iOSDropDown">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Size" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WA9-tz-rZu" customClass="DropDown" customModule="iOSDropDown">
                                                 <rect key="frame" x="17" y="868" width="82" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="82" id="gTh-rT-F5i"/>
@@ -1032,6 +1035,8 @@
                         <outlet property="productImage" destination="cp2-Er-oXA" id="sLp-vG-0DM"/>
                         <outlet property="productNameTxt" destination="9AV-Rq-jPX" id="0dd-wv-Vdb"/>
                         <outlet property="productPriceTxt" destination="F63-jp-Ahk" id="sp8-yw-jyx"/>
+                        <outlet property="quantityDropdown" destination="dKG-U9-Jcj" id="7yh-xw-eZ0"/>
+                        <outlet property="sizeDropdown" destination="WA9-tz-rZu" id="IKs-9a-SLF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4fR-0d-fJu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
