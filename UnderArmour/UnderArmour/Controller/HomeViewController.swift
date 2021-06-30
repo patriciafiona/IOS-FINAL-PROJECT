@@ -114,7 +114,7 @@ class HomeViewController: UIViewController, UIScrollViewDelegate{
         if segue.identifier == "seeMenSeague"{
             category = "Men"
         }else if segue.identifier == "seeWomenSeague"{
-            category = "women"
+            category = "Women"
         }else if segue.identifier == "seeKidsSeague"{
             category = "Kids"
         }

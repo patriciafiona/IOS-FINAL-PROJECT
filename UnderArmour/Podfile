@@ -6,4 +6,5 @@ target 'UnderArmour' do
   use_frameworks!
 
   # Pods for UnderArmour
+  pod 'iOSDropDown'
 end
