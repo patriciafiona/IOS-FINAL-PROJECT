@@ -8,7 +8,7 @@
 
 <br/>
 
-Result of IOS Final Project, requirement for pass IOS Class in Nanjing Xiaozhuang University
+Result of IOS Final Project, requirement for pass IOS Class in Nanjing Xiaozhuang University. Developed using Swift Storyboard.
 
 ## Information
 <p align="center">
