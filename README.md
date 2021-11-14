@@ -16,13 +16,15 @@ Result of IOS Final Project, requirement for pass IOS Class in Nanjing Xiaozhuan
 </p>
 <p align="center"><i><b>Figure 2</b> iOS Logo</i></p>
 
+```diff
 Type                  : Final Project (Nanjing Xiaozhuang University)
 
 Platform              : Mobile - [iOS](https://www.apple.com/id/ios/ios-14/)
 
 Programming Language  : [Swift](https://developer.apple.com/swift/)
 
-Data source : [DISCLAIMER- For Study Only] Under Armour
+Data source           : [DISCLAIMER- For Study Only] Under Armour
+```
 
 For more details you can see the documentations here:
 - https://drive.google.com/file/d/1Dth_TS61-7VSpVvi-Bj_zQYdOsx4ddp0/view?usp=sharing
